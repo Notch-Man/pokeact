@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Modal, Button } from "react-bootstrap";
+import { Card, Modal, Button, Badge } from "react-bootstrap";
 import axios from "axios";
 
 const PokeCard = ({ sprite, pokemon, id }) => {
