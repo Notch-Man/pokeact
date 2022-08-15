@@ -30,7 +30,7 @@ const PokeCard = ({ sprite, pokemon, id }) => {
           },
         ])
       );
-    console.log(info);
+    // console.log(info);
   };
 
   return (
