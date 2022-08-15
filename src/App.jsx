@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Spinner } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 import Header from "./components/Header";
 import PokeCard from "./components/PokeCard";
