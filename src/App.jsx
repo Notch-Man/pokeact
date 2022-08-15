@@ -41,7 +41,7 @@ function App() {
         style={{ gap: "15px" }}
       >
         {p.map((poke) => {
-          if (poke.name.includes(q)) {
+          if (poke.name.includes(q.toLowerCase())) {
             return (
               <PokeCard
                 key={poke.id - 1}
