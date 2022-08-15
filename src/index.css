@@ -1,0 +1,95 @@
+:root {
+  --bg-normal: #a69974;
+  --bg-fire: #f26130;
+  --bg-water: #2b9fd9;
+  --bg-electric: #f5be18;
+  --bg-grass: #55be4c;
+  --bg-ice: #66cccc;
+  --bg-fighting: #b34a36;
+  --bg-poison: #bf43aa;
+  --bg-rock: #bfa156;
+  --bg-flying: #7e87e6;
+  --bg-psychic: #fe4c78;
+  --bg-bug: #a0cc47;
+  --bg-ground: #a68542;
+  --bg-ghost: #6652cc;
+  --bg-dragon: #5050e6;
+  --bg-dark: #020708;
+  --bg-steel: #a3aacc;
+  --bg-fairy: #e67ed4;
+}
+.normal {
+  color: var(--bg-normal);
+}
+.fire {
+  color: var(--bg-fire);
+}
+.water {
+  color: var(--bg-water);
+}
+
+.electric {
+  color: var(--bg-electric);
+}
+
+.grass {
+  color: var(--bg-grass);
+}
+.ice {
+  color: var(--bg-ice);
+}
+
+.fighting {
+  color: var(--bg-fighting);
+}
+
+.poison {
+  color: var(--bg-poison);
+}
+
+.rock {
+  color: var(--bg-rock);
+}
+
+.flying {
+  color: var(--bg-flying);
+}
+
+.psychic {
+  color: var(--bg-psychic);
+}
+.bug {
+  color: var(--bg-bug);
+}
+
+.ground {
+  color: var(--bg-ground);
+}
+
+.ghost {
+  color: var(--bg-ghost);
+}
+
+.dragon {
+  color: var(--bg-dragon);
+}
+.dark {
+  color: var(--bg-dark);
+}
+.steel {
+  color: var(--bg-steel);
+}
+.fairy {
+  color: var(--bg-fairy);
+}
+.card {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
