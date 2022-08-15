@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Card, Modal, Button } from "react-bootstrap";
 import axios from "axios";
 
@@ -14,6 +14,7 @@ const PokeCard = ({ sprite, pokemon, id }) => {
       .then((res) =>
         setInfo([
           {
+            height: res.data.height,
             abilities: res.data.abilities.map((ability) => {
               return (
                 ability.ability.name.charAt(0).toUpperCase() +
@@ -61,18 +62,27 @@ const PokeCard = ({ sprite, pokemon, id }) => {
             className="rounded mx-auto d-block"
             style={{ width: "256px" }}
           />
+
           <h5 class="lead">#{info[0]?.id}</h5>
+
           <h5 class="fwt-semibold">{info[0]?.abilities.join(" • ")}</h5>
+          <h5 class="lead">{info[0]?.weight / 10 || "Loading .."} kg</h5>
+          <h5 class="lead">{info[0]?.height / 10 || "Loading .."} m</h5>
+
           {info[0]?.types.map((type, idx) => {
             if (idx === info[0].types.length - 1) {
               return (
-                <span className={`lead ${type.toLowerCase()}`}>{type}</span>
+                <span className={`${type.toLowerCase()} fs-4 fwt-bold`}>
+                  {type}
+                </span>
               );
             } else {
               return (
                 <span>
-                  <span className={`lead ${type.toLowerCase()}`}>{type} </span>
-                  <span> • </span>
+                  <span className={`${type.toLowerCase()} fs-4 fwt-bold`}>
+                    {type}{" "}
+                  </span>
+                  <span className="fs-5 fwt-bold"> • </span>
                 </span>
               );
             }
