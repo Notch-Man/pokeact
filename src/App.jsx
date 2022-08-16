@@ -41,10 +41,10 @@ function App() {
         style={{ gap: "15px" }}
       >
         {p.map((poke) => {
-          if (poke.name.includes(q.toLowerCase())) {
+          if (poke.name.includes(q.toLowerCase()) || poke.id == q) {
             return (
               <PokeCard
-                key={poke.id - 1}
+                key={poke.id}
                 pokemon={poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}
                 id={poke.id}
                 sprite={`https://img.pokemondb.net/sprites/home/normal/2x/${poke.name}.jpg`}
